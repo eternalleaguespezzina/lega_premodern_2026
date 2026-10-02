@@ -1,0 +1,20 @@
+{
+  "name": "Lega Premodern ELS 2026",
+  "short_name": "Lega ELS",
+  "description": "Classifica, tappe e scontri diretti della Eternal League Spezzina",
+  "lang": "it",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B0A08",
+  "theme_color": "#0B0A08",
+  "categories": ["sports", "games", "entertainment"],
+  "icons": [
+    { "src": "icone/icona-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icone/icona-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icone/icona-adattiva-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icone/icona-adattiva-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

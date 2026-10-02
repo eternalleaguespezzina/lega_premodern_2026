@@ -1,0 +1,24 @@
+@if (mostraPulsante()) {
+  <aside class="invito" aria-label="Installa l'app">
+    <img class="invito__icona" src="icone/icona-192.png" alt="" width="42" height="42" />
+    <p class="invito__testo">
+      <b>Installa l'app della lega</b>
+      Si apre a tutto schermo e funziona anche senza rete.
+    </p>
+    <button type="button" class="invito__azione" (click)="installa()">Installa</button>
+    <button type="button" class="invito__chiudi" (click)="chiudi()" aria-label="Chiudi l'invito">×</button>
+  </aside>
+} @else if (mostraIstruzioniIos()) {
+  <aside class="invito" aria-label="Installa l'app">
+    <img class="invito__icona" src="icone/icona-192.png" alt="" width="42" height="42" />
+    <p class="invito__testo">
+      <b>Installa l'app della lega</b>
+      Tocca
+      <svg class="invito__condividi" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 11v9h14v-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <i>Condividi</i> e poi «Aggiungi alla schermata Home».
+    </p>
+    <button type="button" class="invito__chiudi" (click)="chiudi()" aria-label="Chiudi l'invito">×</button>
+  </aside>
+}

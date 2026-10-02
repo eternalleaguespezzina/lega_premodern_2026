@@ -50,6 +50,21 @@ Si può controllare l'avanzamento nella scheda *Actions*.
 
 ---
 
+## App installabile (PWA)
+
+Il sito si installa sul telefono come un'app, con l'icona dell'emblema ELS:
+
+- **Android (Chrome)**: compare l'invito *Installa l'app* nel sito, oppure menu ⋮ → *Installa app*.
+- **iPhone (Safari)**: *Condividi* → *Aggiungi alla schermata Home*. Il sito mostra le istruzioni a chi non l'ha ancora installata.
+
+Il service worker di Angular (`ngsw-config.json`) fa aprire l'app all'istante e la fa funzionare anche
+senza rete, con l'ultima classifica scaricata. Per `data.json` la strategia è *freshness*: prima la rete,
+la copia salvata solo se la rete non risponde entro 6 secondi. Quindi i dati sono sempre aggiornati.
+
+Quando si pubblica una nuova versione del codice, chi ha l'app la riceve alla riapertura successiva.
+
+---
+
 ## Lavorarci in locale
 
 Serve Node 24 (c'è il file `.nvmrc`, quindi con nvm basta `nvm use`).
@@ -72,7 +87,9 @@ npm run build # versione di produzione in dist/els-lega/browser
 | `src/app/app.config.ts` | Router con indirizzi `#/…` (funzionano su GitHub Pages senza configurare il server) e parametri passati ai componenti come `input()` |
 | `src/app/pages/…` | Una cartella per pagina: classifica, tappe, tappa, giocatore, calendario, scontri |
 | `src/styles.scss` | Tutto lo stile del sito: colori del logo, caratteri, impaginazione |
-| `public/` | Logo, motivo di sfondo, icona e `data.json` |
+| `src/app/invito/` | L'invito a installare l'app (Android: pulsante; iPhone: istruzioni) |
+| `public/` | Logo, motivo di sfondo, icone dell'app, manifest e `data.json` |
+| `ngsw-config.json` | Cosa conserva il service worker e come tratta i dati |
 
 Le scelte di Angular 22 che si vedono nel codice:
 
@@ -81,4 +98,5 @@ Le scelte di Angular 22 che si vedono nel codice:
 - **`resource()`** per il caricamento asincrono, con stato di caricamento ed errore già pronti;
 - il nuovo **controllo di flusso** nei template: `@if`, `@for`, `@empty`;
 - **`input()`** al posto di `@Input()`, alimentato dall'indirizzo grazie a `withComponentInputBinding()`;
-- **niente zone.js**: l'aggiornamento della pagina è guidato dai signal.
+- **niente zone.js**: l'aggiornamento della pagina è guidato dai signal;
+- **`provideServiceWorker()`** e `host` nei componenti per ascoltare eventi della finestra.
