@@ -1,0 +1,86 @@
+<section class="riquadri">
+  <article class="riquadro">
+    <p class="riquadro__etichetta">Avanzamento</p>
+    <p class="riquadro__valore">{{ tappeGiocate() }}<small> / 10 tappe</small></p>
+    <div class="barra" aria-hidden="true">
+      <div class="barra__piena" [style.width.%]="tappeGiocate() * 10"></div>
+    </div>
+  </article>
+
+  @if (lega.prossimoEvento(); as e) {
+    <article class="riquadro">
+      <p class="riquadro__etichetta">Prossimo appuntamento</p>
+      <p class="riquadro__valore riquadro__valore--testo">{{ e.titolo }}</p>
+      <p class="riquadro__nota">{{ dataEstesa(e.data) }} · {{ e.formato }}</p>
+    </article>
+  }
+
+  @if (bersaglio()) {
+    <article class="riquadro riquadro--bersaglio">
+      <p class="riquadro__etichetta">Bersaglio del giant killer</p>
+      <p class="riquadro__valore riquadro__valore--testo">{{ bersaglio() }}</p>
+      @if (riserva()) {
+        <p class="riquadro__riserva"><span>Riserva</span> {{ riserva() }}</p>
+      }
+      <p class="riquadro__nota">Il premio va al primo iscritto che batte il capoclassifica: un playset di token e un punto in classifica. Se il capoclassifica è assente o non perde mai, il bersaglio scende al giocatore successivo in classifica tra i presenti: prima la riserva, poi il terzo, e così via.</p>
+    </article>
+  }
+</section>
+
+<section class="pannello">
+  <header class="pannello__testa">
+    <h2>Classifica generale</h2>
+    <ul class="legenda">
+      <li><span class="pallino pallino--finale"></span>Finale diretta · 1°–6°</li>
+      <li><span class="pallino pallino--lcq"></span>Last chance qualifier · 7°–{{ ultimoLcq() }}°</li>
+    </ul>
+  </header>
+
+  <div class="scorri">
+    <table class="tabella">
+      <thead>
+        <tr>
+          <th class="num" scope="col">Pos</th>
+          <th scope="col">Giocatore</th>
+          <th class="num" scope="col">Punti</th>
+          <th class="num nascondi-sm" scope="col">Match vinti</th>
+          <th class="num nascondi-sm" scope="col">Game vinti</th>
+          <th class="num nascondi-sm" scope="col">Serate vinte</th>
+          <th class="num nascondi-sm" scope="col">Giant killer</th>
+          <th class="num nascondi-sm" scope="col">Presenze</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (r of lega.classifica(); track r.giocatore) {
+          <tr class="riga" [class.riga--finale]="r.zona === 'finale'" [class.riga--lcq]="r.zona === 'lcq'">
+            <td class="num pos">{{ r.pos }}</td>
+            <td>
+              <a class="nome" [routerLink]="['/giocatore', creaSlug(r.giocatore)]">{{ r.giocatore }}</a>
+              @if (r.parita) {
+                <span class="etichetta" title="Pari merito non risolto dagli scontri diretti">pari</span>
+              }
+              <!-- tabellina da telefono: punti = 3 × vit. + 1 × gk. + 3 × match -->
+              <span class="statline" aria-label="Dettaglio">
+                <span><b>{{ r.serateVinte }}</b>vit.</span>
+                <span><b>{{ r.giantKiller }}</b>gk.</span>
+                <span><b>{{ r.matchVinti }}</b>match</span>
+                <span><b>{{ r.gameVinti }}</b>game</span>
+                <span><b>{{ r.presenze }}</b>pres.</span>
+              </span>
+            </td>
+            <td class="num punti">{{ r.punti }}</td>
+            <td class="num nascondi-sm">{{ r.matchVinti }}</td>
+            <td class="num nascondi-sm">{{ r.gameVinti }}</td>
+            <td class="num nascondi-sm">{{ oTrattino(r.serateVinte) }}</td>
+            <td class="num nascondi-sm">{{ oTrattino(r.giantKiller) }}</td>
+            <td class="num nascondi-sm">{{ r.presenze }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <p class="nota">
+    Ordine di classifica: punti, presenze, match vinti, game vinti e infine scontri diretti tra i pari merito.
+    Tocca un nome per vedere la scheda del giocatore.
+  </p>
+</section>

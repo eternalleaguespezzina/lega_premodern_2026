@@ -1,0 +1,88 @@
+@if (tappa(); as t) {
+  <nav class="briciole">
+    <a routerLink="/tappe">← Tutte le tappe</a>
+    <span class="briciole__frecce">
+      @if (n() > 1) { <a [routerLink]="['/tappe', n() - 1]">‹ Tappa {{ n() - 1 }}</a> }
+      @if (n() < 10) { <a [routerLink]="['/tappe', n() + 1]">Tappa {{ n() + 1 }} ›</a> }
+    </span>
+  </nav>
+
+  <header class="titolo-pagina">
+    <p class="titolo-pagina__sopra">{{ dataEstesa(t.data) }}</p>
+    <h2>Tappa {{ t.numero }}</h2>
+  </header>
+
+  @if (!t.giocata) {
+    <p class="stato">Questa tappa non è ancora stata giocata.</p>
+  } @else {
+    <section class="riquadri">
+      <article class="riquadro">
+        <p class="riquadro__etichetta">Vincitore della serata</p>
+        <p class="riquadro__valore riquadro__valore--testo">{{ vincitore() }}</p>
+        <p class="riquadro__nota">+3 punti in classifica</p>
+      </article>
+      <article class="riquadro">
+        <p class="riquadro__etichetta">Giant killer</p>
+        <p class="riquadro__valore riquadro__valore--testo">{{ giantKiller() || '—' }}</p>
+        @if (t.bersaglioGk) { <p class="riquadro__nota">Bersaglio: {{ t.bersaglioGk }}</p> }
+      </article>
+      <article class="riquadro">
+        <p class="riquadro__etichetta">Giocatori</p>
+        <p class="riquadro__valore">{{ t.righe.length }}</p>
+        <p class="riquadro__nota">{{ turni().length }} turni al meglio dei tre</p>
+      </article>
+    </section>
+
+    <section class="pannello">
+      <header class="pannello__testa"><h2>Classifica della serata</h2></header>
+      <div class="scorri">
+        <table class="tabella">
+          <thead>
+            <tr>
+              <th class="num" scope="col">Pos</th>
+              <th scope="col">Giocatore</th>
+              <th class="nascondi-sm" scope="col">Mazzo</th>
+              <th class="num" scope="col">Punti</th>
+              <th class="num" scope="col">Match</th>
+              <th class="num nascondi-sm" scope="col">Game</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (r of t.righe; track r.giocatore) {
+              <tr class="riga" [class.riga--finale]="r.primo">
+                <td class="num pos">{{ r.pos }}</td>
+                <td>
+                  <a class="nome" [routerLink]="['/giocatore', creaSlug(r.giocatore)]">{{ r.giocatore }}</a>
+                  @if (r.primo) { <span class="etichetta etichetta--oro">vincitore</span> }
+                  @if (r.giantKiller) { <span class="etichetta etichetta--oro">giant killer</span> }
+                  <span class="mini solo-sm">{{ r.mazzo }}</span>
+                </td>
+                <td class="nascondi-sm mazzo">{{ r.mazzo }}</td>
+                <td class="num punti">{{ r.punti }}</td>
+                <td class="num">{{ r.matchVinti }}-{{ r.matchPersi }}@if (r.pareggi) {-{{ r.pareggi }}}</td>
+                <td class="num nascondi-sm">{{ r.gameVinti }}-{{ r.gamePersi }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    @for (g of turni(); track g.turno) {
+      <section class="pannello">
+        <header class="pannello__testa"><h2>Turno {{ g.turno }}</h2></header>
+        <ul class="partite">
+          @for (p of g.partite; track p.a) {
+            <li class="partita">
+              <span class="partita__g" [class.partita__g--vince]="p.vincitore === p.a">{{ p.a }}</span>
+              <span class="partita__ris">{{ p.gameA }}–{{ p.gameB }}</span>
+              <span class="partita__g partita__g--dx" [class.partita__g--vince]="p.vincitore === p.b">{{ p.b }}</span>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+  }
+} @else {
+  <p class="stato">Tappa non trovata. <a routerLink="/tappe">Torna alle tappe</a></p>
+}

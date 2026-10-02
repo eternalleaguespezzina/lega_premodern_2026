@@ -1,0 +1,25 @@
+<section class="pannello">
+  <header class="pannello__testa">
+    <h2>Calendario</h2>
+    <p class="pannello__sotto">Ogni giovedì alle 21 · Santo Stefano di Magra (SP)</p>
+  </header>
+  <ol class="linea">
+    @for (e of lega.calendario(); track e.data) {
+      <li class="tappa-linea tappa-linea--{{ e.tipo }}" [class.tappa-linea--passata]="passato(e)" [class.tappa-linea--prossima]="prossimo(e)">
+        <span class="tappa-linea__punto" aria-hidden="true"></span>
+        <div class="tappa-linea__corpo">
+          <p class="tappa-linea__data">{{ dataEstesa(e.data) }}</p>
+          @if (e.tipo === 'tappa' && passato(e)) {
+            <a class="tappa-linea__titolo" [routerLink]="['/tappe', e.numero]">{{ e.titolo }}</a>
+          } @else {
+            <p class="tappa-linea__titolo">{{ e.titolo }}</p>
+          }
+          <p class="tappa-linea__formato">
+            {{ e.formato }}
+            @if (prossimo(e)) { <span class="etichetta etichetta--oro">prossima</span> }
+          </p>
+        </div>
+      </li>
+    }
+  </ol>
+</section>

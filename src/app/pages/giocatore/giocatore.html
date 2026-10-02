@@ -1,0 +1,92 @@
+@if (nome()) {
+  <nav class="briciole"><a routerLink="/">← Classifica</a></nav>
+
+  <header class="titolo-pagina">
+    @if (riga(); as r) {
+      <p class="titolo-pagina__sopra">
+        {{ r.pos }}° in classifica
+        @if (r.zona === 'finale') { · in zona finale }
+        @if (r.zona === 'lcq') { · in zona last chance qualifier }
+      </p>
+    }
+    <h2>{{ nome() }}</h2>
+  </header>
+
+  @if (riga(); as r) {
+    <section class="riquadri riquadri--stat">
+      <article class="riquadro"><p class="riquadro__etichetta">Punti</p><p class="riquadro__valore">{{ r.punti }}</p></article>
+      <article class="riquadro"><p class="riquadro__etichetta">Match</p>
+        <p class="riquadro__valore">{{ record().vinte }}<small>-{{ record().perse }}@if (record().pari) {-{{ record().pari }}}</small></p></article>
+      <article class="riquadro"><p class="riquadro__etichetta">Game</p>
+        <p class="riquadro__valore">{{ record().gameVinti }}<small>-{{ record().gamePersi }}</small></p></article>
+      <article class="riquadro"><p class="riquadro__etichetta">Serate vinte</p><p class="riquadro__valore">{{ r.serateVinte }}</p></article>
+      <article class="riquadro"><p class="riquadro__etichetta">Giant killer</p><p class="riquadro__valore">{{ r.giantKiller }}</p></article>
+      <article class="riquadro"><p class="riquadro__etichetta">Presenze</p><p class="riquadro__valore">{{ r.presenze }}</p></article>
+    </section>
+  }
+
+  <section class="pannello">
+    <header class="pannello__testa"><h2>Tappa per tappa</h2></header>
+    <div class="scorri">
+      <table class="tabella">
+        <thead>
+          <tr>
+            <th scope="col">Tappa</th>
+            <th class="num" scope="col">Pos</th>
+            <th scope="col">Mazzo</th>
+            <th class="num" scope="col">Punti</th>
+            <th class="num" scope="col">Match</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (t of perTappa(); track t.numero) {
+            <tr class="riga" [class.riga--finale]="t.riga?.primo">
+              <td><a class="nome" [routerLink]="['/tappe', t.numero]">Tappa {{ t.numero }}</a>
+                <span class="mini">{{ dataBreve(t.data) }}</span></td>
+              @if (t.riga; as x) {
+                <td class="num pos">{{ x.pos }}</td>
+                <td class="mazzo">{{ x.mazzo }}</td>
+                <td class="num punti">{{ x.punti }}</td>
+                <td class="num">{{ x.matchVinti }}-{{ x.matchPersi }}</td>
+              } @else {
+                <td class="num assente" colspan="4">assente</td>
+              }
+            </tr>
+          } @empty {
+            <tr><td colspan="5" class="assente">Nessuna tappa giocata finora.</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  @if (scontri().length) {
+    <section class="pannello">
+      <header class="pannello__testa"><h2>Scontri diretti</h2></header>
+      <ul class="scontri">
+        @for (s of scontri(); track s.avversario) {
+          <li class="scontro" [class.scontro--su]="s.vinte > s.perse" [class.scontro--giu]="s.perse > s.vinte">
+            <a [routerLink]="['/giocatore', creaSlug(s.avversario)]">{{ s.avversario }}</a>
+            <b>{{ s.vinte }}-{{ s.perse }}</b>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="pannello">
+      <header class="pannello__testa"><h2>Tutte le partite</h2></header>
+      <ul class="partite">
+        @for (p of partite(); track $index) {
+          <li class="partita partita--storico">
+            <span class="partita__quando">T{{ p.tappa }} · turno {{ p.turno }}</span>
+            <span class="esito esito--{{ p.esito }}">{{ p.esito }}</span>
+            <span class="partita__ris">{{ p.miei }}–{{ p.suoi }}</span>
+            <span class="partita__g">{{ p.avversario }}</span>
+          </li>
+        }
+      </ul>
+    </section>
+  }
+} @else {
+  <p class="stato">Giocatore non trovato. <a routerLink="/">Torna alla classifica</a></p>
+}

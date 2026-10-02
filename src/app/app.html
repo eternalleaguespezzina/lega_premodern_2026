@@ -1,0 +1,39 @@
+<header class="testata">
+  <a routerLink="/" class="sigillo" aria-label="Torna alla classifica">
+    <!-- il logo scontornato al centro del cerchio arcano che ruota -->
+    <img class="sigillo__cerchio" src="arcano.svg" alt="" aria-hidden="true" />
+    <span class="sigillo__alone" aria-hidden="true"></span>
+    <img class="sigillo__logo" src="logo-els.webp" alt="Logo Eternal League Spezzina" width="190" height="190" />
+  </a>
+  <p class="testata__sopra">Eternal League Spezzina</p>
+  <h1 class="testata__titolo">Lega Premodern</h1>
+  <p class="testata__anno"><span></span>2026<span></span></p>
+</header>
+
+<nav class="menu" aria-label="Sezioni del sito">
+  <a routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{ exact: true }">Classifica</a>
+  <a routerLink="/tappe" routerLinkActive="attivo">Tappe</a>
+  <a routerLink="/calendario" routerLinkActive="attivo">Calendario</a>
+  <a routerLink="/scontri" routerLinkActive="attivo">Scontri</a>
+</nav>
+
+<main class="contenuto">
+  @if (lega.dati.isLoading()) {
+    <p class="stato">Caricamento della classifica…</p>
+  } @else if (lega.dati.error()) {
+    <p class="stato stato--errore">Non riesco a caricare i dati della lega. Riprova tra poco.</p>
+  } @else {
+    <router-outlet />
+  }
+</main>
+
+<footer class="piede">
+  @if (lega.dati.value(); as d) {
+    <p>Aggiornato a {{ dataEstesa(d.aggiornato) }} · {{ d.tappeGiocate }} tappe giocate su 10</p>
+  }
+  <p>Ogni giovedì alle 21 · Santo Stefano di Magra (SP)</p>
+  <p class="piede__link">
+    <a href="https://www.instagram.com/els_mtg_official/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/els.mtg.official" target="_blank" rel="noopener">Facebook</a>
+  </p>
+</footer>

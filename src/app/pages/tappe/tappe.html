@@ -1,0 +1,24 @@
+<section class="pannello">
+  <header class="pannello__testa">
+    <h2>Le dieci tappe</h2>
+    <p class="pannello__sotto">Si gioca in costruito, ogni giovedì alle 21</p>
+  </header>
+
+  <div class="griglia-tappe">
+    @for (t of lega.tappe(); track t.numero) {
+      <a class="carta-tappa" [class.carta-tappa--giocata]="t.giocata" [routerLink]="['/tappe', t.numero]">
+        <span class="carta-tappa__num">{{ t.numero }}</span>
+        <span class="carta-tappa__data">{{ dataEstesa(t.data) }}</span>
+        @if (t.giocata) {
+          <span class="carta-tappa__riga"><b>Vince</b> {{ vincitore(t) }}</span>
+          @if (giantKiller(t)) {
+            <span class="carta-tappa__riga"><b>Giant killer</b> {{ giantKiller(t) }}</span>
+          }
+          <span class="carta-tappa__piccolo">{{ t.righe.length }} giocatori</span>
+        } @else {
+          <span class="carta-tappa__piccolo">Da giocare</span>
+        }
+      </a>
+    }
+  </div>
+</section>

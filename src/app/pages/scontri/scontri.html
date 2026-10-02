@@ -1,0 +1,36 @@
+<section class="pannello">
+  <header class="pannello__testa">
+    <h2>Scontri diretti</h2>
+    <p class="pannello__sotto">Si legge dalla riga: vittorie-sconfitte del giocatore in riga contro quello in colonna</p>
+  </header>
+  <div class="scorri">
+    <table class="matrice">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          @for (c of nomi(); track c) {
+            <th scope="col" [title]="c">{{ iniziali(c) }}</th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @for (r of nomi(); track r) {
+          <tr>
+            <th scope="row"><a [routerLink]="['/giocatore', creaSlug(r)]">{{ r }}</a></th>
+            @for (c of nomi(); track c) {
+              @if (r === c) {
+                <td class="matrice__vuota"></td>
+              } @else {
+                @if (cella(r, c); as x) {
+                  <td [class.matrice__su]="x.v > x.s" [class.matrice__giu]="x.s > x.v">{{ x.v }}-{{ x.s }}</td>
+                } @else {
+                  <td></td>
+                }
+              }
+            }
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

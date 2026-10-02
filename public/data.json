@@ -1,0 +1,813 @@
+{
+ "stagione": "Lega Premodern ELS 2026",
+ "aggiornato": "2026-10-02",
+ "tappeGiocate": 1,
+ "ultimoPostoLcq": 10,
+ "giocatori": [
+  "Tommaso Bertone",
+  "Marco Bonati",
+  "Luca Brugnone",
+  "Dario Chelli",
+  "Manuel Craba",
+  "Gianmarco Cucciniello",
+  "Marco Doveri",
+  "Matteo Langella",
+  "Simone Lazzini",
+  "Matteo Mazzetti",
+  "Alessandro Orlandini",
+  "Jacopo Pinelli",
+  "Daniele Rebecchi",
+  "Johnny Rebecchi",
+  "Andrea Righetti",
+  "Giacomo Spampani",
+  "Daniel Testi",
+  "Ivan Tongiani",
+  "Elisa Zanchetta"
+ ],
+ "classifica": [
+  {
+   "pos": 1,
+   "giocatore": "Marco Doveri",
+   "punti": 12,
+   "matchVinti": 3,
+   "gameVinti": 7,
+   "serateVinte": 1,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "finale",
+   "parita": false
+  },
+  {
+   "pos": 2,
+   "giocatore": "Gianmarco Cucciniello",
+   "punti": 9,
+   "matchVinti": 3,
+   "gameVinti": 6,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "finale",
+   "parita": false
+  },
+  {
+   "pos": 3,
+   "giocatore": "Matteo Langella",
+   "punti": 9,
+   "matchVinti": 3,
+   "gameVinti": 6,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "finale",
+   "parita": false
+  },
+  {
+   "pos": 4,
+   "giocatore": "Jacopo Pinelli",
+   "punti": 9,
+   "matchVinti": 3,
+   "gameVinti": 6,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "finale",
+   "parita": false
+  },
+  {
+   "pos": 5,
+   "giocatore": "Daniele Rebecchi",
+   "punti": 7,
+   "matchVinti": 2,
+   "gameVinti": 4,
+   "serateVinte": 0,
+   "giantKiller": 1,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "finale",
+   "parita": false
+  },
+  {
+   "pos": 6,
+   "giocatore": "Andrea Righetti",
+   "punti": 6,
+   "matchVinti": 2,
+   "gameVinti": 6,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "finale",
+   "parita": false
+  },
+  {
+   "pos": 7,
+   "giocatore": "Alessandro Orlandini",
+   "punti": 6,
+   "matchVinti": 2,
+   "gameVinti": 5,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "lcq",
+   "parita": true
+  },
+  {
+   "pos": 8,
+   "giocatore": "Ivan Tongiani",
+   "punti": 6,
+   "matchVinti": 2,
+   "gameVinti": 5,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "lcq",
+   "parita": true
+  },
+  {
+   "pos": 9,
+   "giocatore": "Tommaso Bertone",
+   "punti": 3,
+   "matchVinti": 1,
+   "gameVinti": 4,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "lcq",
+   "parita": false
+  },
+  {
+   "pos": 10,
+   "giocatore": "Marco Bonati",
+   "punti": 3,
+   "matchVinti": 1,
+   "gameVinti": 4,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "lcq",
+   "parita": false
+  },
+  {
+   "pos": 11,
+   "giocatore": "Luca Brugnone",
+   "punti": 3,
+   "matchVinti": 1,
+   "gameVinti": 3,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 12,
+   "giocatore": "Johnny Rebecchi",
+   "punti": 3,
+   "matchVinti": 1,
+   "gameVinti": 2,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 1,
+   "assenze": 0,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 13,
+   "giocatore": "Dario Chelli",
+   "punti": 0,
+   "matchVinti": 0,
+   "gameVinti": 0,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 0,
+   "assenze": 1,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 14,
+   "giocatore": "Manuel Craba",
+   "punti": 0,
+   "matchVinti": 0,
+   "gameVinti": 0,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 0,
+   "assenze": 1,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 15,
+   "giocatore": "Simone Lazzini",
+   "punti": 0,
+   "matchVinti": 0,
+   "gameVinti": 0,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 0,
+   "assenze": 1,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 16,
+   "giocatore": "Matteo Mazzetti",
+   "punti": 0,
+   "matchVinti": 0,
+   "gameVinti": 0,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 0,
+   "assenze": 1,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 17,
+   "giocatore": "Giacomo Spampani",
+   "punti": 0,
+   "matchVinti": 0,
+   "gameVinti": 0,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 0,
+   "assenze": 1,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 18,
+   "giocatore": "Daniel Testi",
+   "punti": 0,
+   "matchVinti": 0,
+   "gameVinti": 0,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 0,
+   "assenze": 1,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 19,
+   "giocatore": "Elisa Zanchetta",
+   "punti": 0,
+   "matchVinti": 0,
+   "gameVinti": 0,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 0,
+   "assenze": 1,
+   "zona": "",
+   "parita": false
+  }
+ ],
+ "tappe": [
+  {
+   "numero": 1,
+   "data": "2026-10-01",
+   "giocata": true,
+   "bersaglioGk": "Marco Bonati",
+   "righe": [
+    {
+     "pos": 1,
+     "giocatore": "Marco Doveri",
+     "punti": 12,
+     "matchVinti": 3,
+     "gameVinti": 7,
+     "giantKiller": false,
+     "matchPersi": 1,
+     "pareggi": 0,
+     "gamePersi": 3,
+     "primo": true,
+     "mazzo": "Mono-Black"
+    },
+    {
+     "pos": 2,
+     "giocatore": "Gianmarco Cucciniello",
+     "punti": 9,
+     "matchVinti": 3,
+     "gameVinti": 6,
+     "giantKiller": false,
+     "matchPersi": 1,
+     "pareggi": 0,
+     "gamePersi": 3,
+     "primo": false,
+     "mazzo": "Naya"
+    },
+    {
+     "pos": 3,
+     "giocatore": "Jacopo Pinelli",
+     "punti": 9,
+     "matchVinti": 3,
+     "gameVinti": 6,
+     "giantKiller": false,
+     "matchPersi": 1,
+     "pareggi": 0,
+     "gamePersi": 4,
+     "primo": false,
+     "mazzo": "Gruul"
+    },
+    {
+     "pos": 4,
+     "giocatore": "Matteo Langella",
+     "punti": 9,
+     "matchVinti": 3,
+     "gameVinti": 6,
+     "giantKiller": false,
+     "matchPersi": 1,
+     "pareggi": 0,
+     "gamePersi": 2,
+     "primo": false,
+     "mazzo": "Orzhov"
+    },
+    {
+     "pos": 5,
+     "giocatore": "Ivan Tongiani",
+     "punti": 6,
+     "matchVinti": 2,
+     "gameVinti": 5,
+     "giantKiller": false,
+     "matchPersi": 2,
+     "pareggi": 0,
+     "gamePersi": 4,
+     "primo": false,
+     "mazzo": "Mono-Blue"
+    },
+    {
+     "pos": 6,
+     "giocatore": "Alessandro Orlandini",
+     "punti": 6,
+     "matchVinti": 2,
+     "gameVinti": 5,
+     "giantKiller": false,
+     "matchPersi": 2,
+     "pareggi": 0,
+     "gamePersi": 6,
+     "primo": false,
+     "mazzo": "Selesnya"
+    },
+    {
+     "pos": 7,
+     "giocatore": "Daniele Rebecchi",
+     "punti": 7,
+     "matchVinti": 2,
+     "gameVinti": 4,
+     "giantKiller": true,
+     "matchPersi": 2,
+     "pareggi": 0,
+     "gamePersi": 5,
+     "primo": false,
+     "mazzo": "Jeskai"
+    },
+    {
+     "pos": 8,
+     "giocatore": "Andrea Righetti",
+     "punti": 6,
+     "matchVinti": 2,
+     "gameVinti": 6,
+     "giantKiller": false,
+     "matchPersi": 2,
+     "pareggi": 0,
+     "gamePersi": 5,
+     "primo": false,
+     "mazzo": "Mono-Black"
+    },
+    {
+     "pos": 9,
+     "giocatore": "Luca Brugnone",
+     "punti": 3,
+     "matchVinti": 1,
+     "gameVinti": 3,
+     "giantKiller": false,
+     "matchPersi": 3,
+     "pareggi": 0,
+     "gamePersi": 7,
+     "primo": false,
+     "mazzo": "Mono-Blue"
+    },
+    {
+     "pos": 10,
+     "giocatore": "Tommaso Bertone",
+     "punti": 3,
+     "matchVinti": 1,
+     "gameVinti": 4,
+     "giantKiller": false,
+     "matchPersi": 3,
+     "pareggi": 0,
+     "gamePersi": 6,
+     "primo": false,
+     "mazzo": "W-U-B-R-G"
+    },
+    {
+     "pos": 11,
+     "giocatore": "Marco Bonati",
+     "punti": 3,
+     "matchVinti": 1,
+     "gameVinti": 4,
+     "giantKiller": false,
+     "matchPersi": 3,
+     "pareggi": 0,
+     "gamePersi": 6,
+     "primo": false,
+     "mazzo": "Gruul"
+    },
+    {
+     "pos": 12,
+     "giocatore": "Johnny Rebecchi",
+     "punti": 3,
+     "matchVinti": 1,
+     "gameVinti": 2,
+     "giantKiller": false,
+     "matchPersi": 3,
+     "pareggi": 0,
+     "gamePersi": 7,
+     "primo": false,
+     "mazzo": "Mono-Red"
+    }
+   ]
+  },
+  {
+   "numero": 2,
+   "data": "2026-10-08",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  },
+  {
+   "numero": 3,
+   "data": "2026-10-15",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  },
+  {
+   "numero": 4,
+   "data": "2026-10-22",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  },
+  {
+   "numero": 5,
+   "data": "2026-10-29",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  },
+  {
+   "numero": 6,
+   "data": "2026-11-05",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  },
+  {
+   "numero": 7,
+   "data": "2026-11-12",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  },
+  {
+   "numero": 8,
+   "data": "2026-11-19",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  },
+  {
+   "numero": 9,
+   "data": "2026-11-26",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  },
+  {
+   "numero": 10,
+   "data": "2026-12-03",
+   "giocata": false,
+   "bersaglioGk": "",
+   "righe": []
+  }
+ ],
+ "partite": [
+  {
+   "tappa": 1,
+   "turno": 1,
+   "a": "Daniele Rebecchi",
+   "gameA": 2,
+   "gameB": 1,
+   "b": "Marco Bonati",
+   "vincitore": "Daniele Rebecchi"
+  },
+  {
+   "tappa": 1,
+   "turno": 1,
+   "a": "Jacopo Pinelli",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Alessandro Orlandini",
+   "vincitore": "Jacopo Pinelli"
+  },
+  {
+   "tappa": 1,
+   "turno": 1,
+   "a": "Johnny Rebecchi",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Ivan Tongiani",
+   "vincitore": "Ivan Tongiani"
+  },
+  {
+   "tappa": 1,
+   "turno": 1,
+   "a": "Luca Brugnone",
+   "gameA": 2,
+   "gameB": 1,
+   "b": "Andrea Righetti",
+   "vincitore": "Luca Brugnone"
+  },
+  {
+   "tappa": 1,
+   "turno": 1,
+   "a": "Marco Doveri",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Gianmarco Cucciniello",
+   "vincitore": "Marco Doveri"
+  },
+  {
+   "tappa": 1,
+   "turno": 1,
+   "a": "Matteo Langella",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Tommaso Bertone",
+   "vincitore": "Matteo Langella"
+  },
+  {
+   "tappa": 1,
+   "turno": 2,
+   "a": "Alessandro Orlandini",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Gianmarco Cucciniello",
+   "vincitore": "Gianmarco Cucciniello"
+  },
+  {
+   "tappa": 1,
+   "turno": 2,
+   "a": "Daniele Rebecchi",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Matteo Langella",
+   "vincitore": "Matteo Langella"
+  },
+  {
+   "tappa": 1,
+   "turno": 2,
+   "a": "Ivan Tongiani",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Luca Brugnone",
+   "vincitore": "Ivan Tongiani"
+  },
+  {
+   "tappa": 1,
+   "turno": 2,
+   "a": "Marco Bonati",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Johnny Rebecchi",
+   "vincitore": "Marco Bonati"
+  },
+  {
+   "tappa": 1,
+   "turno": 2,
+   "a": "Marco Doveri",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Jacopo Pinelli",
+   "vincitore": "Jacopo Pinelli"
+  },
+  {
+   "tappa": 1,
+   "turno": 2,
+   "a": "Tommaso Bertone",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Andrea Righetti",
+   "vincitore": "Andrea Righetti"
+  },
+  {
+   "tappa": 1,
+   "turno": 3,
+   "a": "Andrea Righetti",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Marco Doveri",
+   "vincitore": "Marco Doveri"
+  },
+  {
+   "tappa": 1,
+   "turno": 3,
+   "a": "Ivan Tongiani",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Gianmarco Cucciniello",
+   "vincitore": "Gianmarco Cucciniello"
+  },
+  {
+   "tappa": 1,
+   "turno": 3,
+   "a": "Jacopo Pinelli",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Matteo Langella",
+   "vincitore": "Matteo Langella"
+  },
+  {
+   "tappa": 1,
+   "turno": 3,
+   "a": "Luca Brugnone",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Daniele Rebecchi",
+   "vincitore": "Daniele Rebecchi"
+  },
+  {
+   "tappa": 1,
+   "turno": 3,
+   "a": "Marco Bonati",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Alessandro Orlandini",
+   "vincitore": "Alessandro Orlandini"
+  },
+  {
+   "tappa": 1,
+   "turno": 3,
+   "a": "Tommaso Bertone",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Johnny Rebecchi",
+   "vincitore": "Johnny Rebecchi"
+  },
+  {
+   "tappa": 1,
+   "turno": 4,
+   "a": "Alessandro Orlandini",
+   "gameA": 2,
+   "gameB": 1,
+   "b": "Luca Brugnone",
+   "vincitore": "Alessandro Orlandini"
+  },
+  {
+   "tappa": 1,
+   "turno": 4,
+   "a": "Andrea Righetti",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Johnny Rebecchi",
+   "vincitore": "Andrea Righetti"
+  },
+  {
+   "tappa": 1,
+   "turno": 4,
+   "a": "Ivan Tongiani",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Jacopo Pinelli",
+   "vincitore": "Jacopo Pinelli"
+  },
+  {
+   "tappa": 1,
+   "turno": 4,
+   "a": "Marco Bonati",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Tommaso Bertone",
+   "vincitore": "Tommaso Bertone"
+  },
+  {
+   "tappa": 1,
+   "turno": 4,
+   "a": "Marco Doveri",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Daniele Rebecchi",
+   "vincitore": "Marco Doveri"
+  },
+  {
+   "tappa": 1,
+   "turno": 4,
+   "a": "Matteo Langella",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Gianmarco Cucciniello",
+   "vincitore": "Gianmarco Cucciniello"
+  }
+ ],
+ "calendario": [
+  {
+   "tipo": "tappa",
+   "numero": 1,
+   "data": "2026-10-01",
+   "titolo": "Tappa 1",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 2,
+   "data": "2026-10-08",
+   "titolo": "Tappa 2",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 3,
+   "data": "2026-10-15",
+   "titolo": "Tappa 3",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 4,
+   "data": "2026-10-22",
+   "titolo": "Tappa 4",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 5,
+   "data": "2026-10-29",
+   "titolo": "Tappa 5",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 6,
+   "data": "2026-11-05",
+   "titolo": "Tappa 6",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 7,
+   "data": "2026-11-12",
+   "titolo": "Tappa 7",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 8,
+   "data": "2026-11-19",
+   "titolo": "Tappa 8",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 9,
+   "data": "2026-11-26",
+   "titolo": "Tappa 9",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "tappa",
+   "numero": 10,
+   "data": "2026-12-03",
+   "titolo": "Tappa 10",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "lcq",
+   "data": "2026-12-10",
+   "titolo": "Last chance qualifier",
+   "formato": "Costruito"
+  },
+  {
+   "tipo": "finale",
+   "data": "2026-12-17",
+   "titolo": "Finale",
+   "formato": "Draft · Cubo Premodern"
+  },
+  {
+   "tipo": "cena",
+   "data": "2026-12-19",
+   "titolo": "Cena finale",
+   "formato": "Premiazione · aperta a tutti"
+  }
+ ]
+}
