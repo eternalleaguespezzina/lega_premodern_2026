@@ -59,6 +59,13 @@ export interface EventoCalendario {
   formato: string;
 }
 
+/** Estrazione ufficiale dei Tix (foglio Estrazioni dell'Excel). */
+export interface Estrazione {
+  tappa: number;
+  data: string;
+  vincitore: string;
+}
+
 export interface DatiLega {
   stagione: string;
   aggiornato: string;
@@ -69,4 +76,7 @@ export interface DatiLega {
   tappe: Tappa[];
   partite: Partita[];
   calendario: EventoCalendario[];
+  estrazioni: Estrazione[];
+  /** Impronta SHA-256 della password per l'estrazione ufficiale; vuota = non impostata. */
+  passwordEstrazioneHash: string;
 }

@@ -28,6 +28,7 @@ export class LeagueData {
   readonly partite = computed(() => this.dati.value()?.partite ?? []);
   readonly calendario = computed(() => this.dati.value()?.calendario ?? []);
   readonly giocatori = computed(() => this.dati.value()?.giocatori ?? []);
+  readonly estrazioni = computed(() => this.dati.value()?.estrazioni ?? []);
 
   readonly capolista = computed(() => this.classifica()[0] ?? null);
 

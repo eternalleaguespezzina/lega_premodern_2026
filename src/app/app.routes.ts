@@ -5,6 +5,7 @@ import { TappaPage } from './pages/tappa/tappa';
 import { GiocatorePage } from './pages/giocatore/giocatore';
 import { ScontriPage } from './pages/scontri/scontri';
 import { CalendarioPage } from './pages/calendario/calendario';
+import { EstrazionePage } from './pages/estrazione/estrazione';
 
 const suffisso = ' · Lega Premodern ELS 2026';
 
@@ -16,5 +17,6 @@ export const routes: Routes = [
   { path: 'giocatore/:slug', component: GiocatorePage, title: 'Giocatore' + suffisso },
   { path: 'calendario', component: CalendarioPage, title: 'Calendario' + suffisso },
   { path: 'scontri', component: ScontriPage, title: 'Scontri diretti' + suffisso },
+  { path: 'estrazione', component: EstrazionePage, title: 'Estrazione Tix' + suffisso },
   { path: '**', redirectTo: '' },
 ];

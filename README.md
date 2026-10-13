@@ -65,6 +65,24 @@ Quando si pubblica una nuova versione del codice, chi ha l'app la riceve alla ri
 
 ---
 
+## Estrazione dei Tix
+
+Pagina `#/estrazione`, raggiungibile dal link nel piè di pagina.
+
+- Tutti vedono lo storico dei vincitori e possono fare **estrazioni di prova**, marcate *PROVA*.
+- L'**estrazione ufficiale** si sblocca con la password, solo la sera della tappa, una volta per tappa.
+- Nel sorteggio entrano gli iscritti che non hanno già vinto due volte; gli assenti si tolgono con −.
+- Il vincitore viene scelto con il generatore casuale crittografico del browser, *prima* dell'animazione.
+
+Il sito non può salvare: l'estrazione ufficiale resta memorizzata sul telefono di chi l'ha fatta
+(nello storico compare *da registrare*) finché il vincitore non viene scritto nel foglio
+**Estrazioni** dell'Excel e il `data.json` aggiornato.
+
+La password non è salvata in chiaro: nel `data.json` c'è solo la sua impronta SHA-256
+(cella H5 del foglio Estrazioni). Maiuscole e spazi non contano.
+
+---
+
 ## Lavorarci in locale
 
 Serve Node 24 (c'è il file `.nvmrc`, quindi con nvm basta `nvm use`).
@@ -87,6 +105,7 @@ npm run build # versione di produzione in dist/els-lega/browser
 | `src/app/app.config.ts` | Router con indirizzi `#/…` (funzionano su GitHub Pages senza configurare il server) e parametri passati ai componenti come `input()` |
 | `src/app/pages/…` | Una cartella per pagina: classifica, tappe, tappa, giocatore, calendario, scontri |
 | `src/styles.scss` | Tutto lo stile del sito: colori del logo, caratteri, impaginazione |
+| `src/app/pages/estrazione/` | La slot machine per l'estrazione dei Tix |
 | `src/app/invito/` | L'invito a installare l'app (Android: pulsante; iPhone: istruzioni) |
 | `public/` | Logo, motivo di sfondo, icone dell'app, manifest e `data.json` |
 | `ngsw-config.json` | Cosa conserva il service worker e come tratta i dati |

@@ -1,0 +1,134 @@
+<header class="titolo-pagina">
+  <p class="titolo-pagina__sopra titolo-pagina__sopra--frase">5 Tix tra gli iscritti presenti · massimo due vittorie a testa</p>
+  <h2>Estrazione Tix</h2>
+</header>
+
+<!-- ============ la slot machine ============ -->
+<section class="pannello slot">
+  <div class="rullo" [class.rullo--corsa]="inCorsa()" [style.height.px]="altezzaRiga * 3">
+    <div class="rullo__striscia" [style.transform]="'translateY(' + spostamento() + 'px)'" [style.transition]="transizione()">
+      @for (n of nastro(); track $index) {
+        <div class="rullo__voce">{{ n }}</div>
+      } @empty {
+        @for (g of inEstrazione().slice(0, 3); track g.nome) {
+          <div class="rullo__voce">{{ g.nome }}</div>
+        }
+      }
+    </div>
+    <div class="rullo__mirino" aria-hidden="true"></div>
+  </div>
+
+  <div class="slot__comandi">
+    <button type="button" class="pulsante pulsante--secondario" (click)="estrai(false)" [disabled]="inCorsa() || !inEstrazione().length">
+      Prova
+    </button>
+    <button type="button" class="pulsante" (click)="estrai(true)" [disabled]="inCorsa() || !ufficialePossibile()">
+      Estrazione ufficiale
+    </button>
+  </div>
+
+  <div class="slot__stato">
+    @if (!passwordImpostata()) {
+      <p>L'estrazione ufficiale non è ancora attiva: manca la password.</p>
+    } @else if (giaEstrattaStasera(); as fatta) {
+      <p>Estrazione ufficiale della tappa {{ fatta.tappa }} già fatta: ha vinto <b>{{ fatta.vincitore }}</b>.</p>
+    } @else if (!sbloccato()) {
+      <form class="sblocco" (submit)="$event.preventDefault(); sblocca(pw.value)">
+        <label for="pw">
+          Password per l'estrazione ufficiale@if (tappaCorrente(); as t) { della tappa {{ t }}}
+        </label>
+        <div class="sblocco__riga">
+          <input id="pw" #pw type="password" autocomplete="off" autocapitalize="none" />
+          <button type="submit" class="pulsante pulsante--secondario">Sblocca</button>
+        </div>
+        @if (passwordErrata()) { <p class="sblocco__errore">Password errata.</p> }
+      </form>
+    } @else if (tappaCorrente() === null) {
+      <p>Sbloccata ✓ L'estrazione ufficiale si potrà fare la sera della prossima tappa; intanto le prove sono libere.</p>
+    } @else {
+      <p>Sbloccata ✓ Estrazione ufficiale della tappa {{ tappaCorrente() }} pronta.</p>
+    }
+  </div>
+</section>
+
+<!-- ============ risultato ============ -->
+@if (risultato(); as r) {
+  <div class="vincita" [class.vincita--prova]="!r.ufficiale" role="dialog" aria-modal="true" aria-labelledby="vincita-nome" (click)="chiudiRisultato()">
+    <div class="vincita__carta" (click)="$event.stopPropagation()">
+      <div class="vincita__scintille" aria-hidden="true">
+        @for (s of scintille; track $index) {
+          <span [style.--x]="s.x + 'px'" [style.--y]="s.y + 'px'" [style.animation-delay.ms]="s.ritardo"></span>
+        }
+      </div>
+      @if (!r.ufficiale) {
+        <!-- filigrana: impossibile da ritagliare via da uno screenshot -->
+        <p class="vincita__filigrana" aria-hidden="true">Prova</p>
+      }
+      <p class="vincita__etichetta">{{ r.ufficiale ? 'Estrazione ufficiale' : 'Estrazione di prova' }}</p>
+      <p class="vincita__nome" id="vincita-nome">{{ r.vincitore }}</p>
+      <p class="vincita__premio">{{ r.ufficiale ? 'vince 5 Tix' : 'vincerebbe 5 Tix · non vale' }}</p>
+      <p class="vincita__quando">
+        @if (r.tappa) { Tappa {{ r.tappa }} · }{{ dataEstesa(r.quando.toISOString().slice(0, 10)) }} · {{ ora(r.quando) }}
+      </p>
+      <button #chiudi type="button" class="pulsante pulsante--secondario" (click)="chiudiRisultato()">Chiudi</button>
+    </div>
+  </div>
+}
+
+<!-- ============ chi c'è e chi no ============ -->
+<section class="pannello">
+  <header class="pannello__testa">
+    <h2>Chi partecipa</h2>
+    <p class="pannello__sotto">Togli gli assenti con −, rimettili con +</p>
+  </header>
+  <div class="liste">
+    <div class="lista">
+      <h3 class="lista__titolo">In estrazione <span>{{ inEstrazione().length }}</span></h3>
+      <ul>
+        @for (g of inEstrazione(); track g.nome) {
+          <li class="persona">
+            <span class="persona__nome">{{ g.nome }}<small>{{ g.presenze }} pres.@if (g.vittorie) { · 1 vinta }</small></span>
+            <button type="button" class="tondo" (click)="togli(g.nome)" [disabled]="inCorsa()" [attr.aria-label]="'Togli ' + g.nome">−</button>
+          </li>
+        } @empty {
+          <li class="lista__vuota">Nessuno</li>
+        }
+      </ul>
+    </div>
+    <div class="lista lista--fuori">
+      <h3 class="lista__titolo">Assenti <span>{{ fuori().length }}</span></h3>
+      <ul>
+        @for (g of fuori(); track g.nome) {
+          <li class="persona">
+            <span class="persona__nome">{{ g.nome }}<small>{{ g.presenze }} pres.@if (g.vittorie) { · 1 vinta }</small></span>
+            <button type="button" class="tondo tondo--piu" (click)="rimetti(g.nome)" [disabled]="inCorsa()" [attr.aria-label]="'Rimetti ' + g.nome">+</button>
+          </li>
+        } @empty {
+          <li class="lista__vuota">Nessuno</li>
+        }
+      </ul>
+    </div>
+  </div>
+  @if (esclusi().length) {
+    <p class="esclusi">
+      <b>Già vinto due volte:</b>
+      @for (g of esclusi(); track g.nome) { <span>{{ g.nome }}</span> }
+    </p>
+  }
+</section>
+
+<!-- ============ storico ============ -->
+<section class="pannello">
+  <header class="pannello__testa"><h2>Vincitori</h2></header>
+  <ul class="storico">
+    @for (e of estrazioniUfficiali(); track e.tappa) {
+      <li>
+        <span class="storico__tappa">Tappa {{ e.tappa }}</span>
+        <span class="storico__nome">{{ e.vincitore }}</span>
+        <span class="storico__data">{{ dataEstesa(e.data) }}@if (e.daRegistrare) { · <em>da registrare</em> }</span>
+      </li>
+    } @empty {
+      <li class="lista__vuota">Ancora nessuna estrazione.</li>
+    }
+  </ul>
+</section>
