@@ -1,7 +1,7 @@
 {
  "stagione": "Lega Premodern ELS 2026",
- "aggiornato": "2026-10-22",
- "tappeGiocate": 4,
+ "aggiornato": "2026-10-29",
+ "tappeGiocate": 5,
  "ultimoPostoLcq": 10,
  "giocatori": [
   "Tommaso Bertone",
@@ -29,44 +29,57 @@
   {
    "pos": 1,
    "giocatore": "Alessandro Orlandini",
-   "punti": 51,
-   "matchVinti": 14,
-   "gameVinti": 29,
+   "punti": 57,
+   "matchVinti": 16,
+   "gameVinti": 33,
    "serateVinte": 3,
    "giantKiller": 0,
-   "presenze": 4,
+   "presenze": 5,
    "assenze": 0,
    "zona": "finale",
    "parita": false
   },
   {
    "pos": 2,
-   "giocatore": "Gianmarco Cucciniello",
-   "punti": 25,
-   "matchVinti": 8,
-   "gameVinti": 18,
-   "serateVinte": 0,
-   "giantKiller": 0,
-   "presenze": 3,
+   "giocatore": "Marco Doveri",
+   "punti": 37,
+   "matchVinti": 10,
+   "gameVinti": 22,
+   "serateVinte": 2,
+   "giantKiller": 1,
+   "presenze": 4,
    "assenze": 1,
    "zona": "finale",
    "parita": false
   },
   {
    "pos": 3,
-   "giocatore": "Marco Doveri",
-   "punti": 24,
-   "matchVinti": 7,
-   "gameVinti": 16,
-   "serateVinte": 1,
+   "giocatore": "Gianmarco Cucciniello",
+   "punti": 28,
+   "matchVinti": 9,
+   "gameVinti": 21,
+   "serateVinte": 0,
    "giantKiller": 0,
-   "presenze": 3,
+   "presenze": 4,
    "assenze": 1,
    "zona": "finale",
    "parita": false
   },
   {
    "pos": 4,
+   "giocatore": "Marco Bonati",
+   "punti": 24,
+   "matchVinti": 8,
+   "gameVinti": 20,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 4,
+   "assenze": 1,
+   "zona": "finale",
+   "parita": false
+  },
+  {
+   "pos": 5,
    "giocatore": "Tommaso Bertone",
    "punti": 22,
    "matchVinti": 7,
@@ -74,25 +87,38 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 4,
-   "assenze": 0,
-   "zona": "finale",
-   "parita": false
-  },
-  {
-   "pos": 5,
-   "giocatore": "Jacopo Pinelli",
-   "punti": 22,
-   "matchVinti": 7,
-   "gameVinti": 16,
-   "serateVinte": 0,
-   "giantKiller": 1,
-   "presenze": 3,
    "assenze": 1,
    "zona": "finale",
    "parita": false
   },
   {
    "pos": 6,
+   "giocatore": "Jacopo Pinelli",
+   "punti": 22,
+   "matchVinti": 7,
+   "gameVinti": 17,
+   "serateVinte": 0,
+   "giantKiller": 1,
+   "presenze": 4,
+   "assenze": 1,
+   "zona": "finale",
+   "parita": false
+  },
+  {
+   "pos": 7,
+   "giocatore": "Ivan Tongiani",
+   "punti": 22,
+   "matchVinti": 7,
+   "gameVinti": 17,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 4,
+   "assenze": 1,
+   "zona": "lcq",
+   "parita": false
+  },
+  {
+   "pos": 8,
    "giocatore": "Matteo Mazzetti",
    "punti": 21,
    "matchVinti": 7,
@@ -100,12 +126,25 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 3,
-   "assenze": 1,
-   "zona": "finale",
+   "assenze": 2,
+   "zona": "lcq",
    "parita": false
   },
   {
-   "pos": 7,
+   "pos": 9,
+   "giocatore": "Luca Brugnone",
+   "punti": 20,
+   "matchVinti": 6,
+   "gameVinti": 16,
+   "serateVinte": 0,
+   "giantKiller": 1,
+   "presenze": 4,
+   "assenze": 1,
+   "zona": "lcq",
+   "parita": false
+  },
+  {
+   "pos": 10,
    "giocatore": "Andrea Righetti",
    "punti": 19,
    "matchVinti": 6,
@@ -113,12 +152,12 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 3,
-   "assenze": 1,
+   "assenze": 2,
    "zona": "lcq",
    "parita": false
   },
   {
-   "pos": 8,
+   "pos": 11,
    "giocatore": "Johnny Rebecchi",
    "punti": 18,
    "matchVinti": 6,
@@ -126,25 +165,12 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 4,
-   "assenze": 0,
-   "zona": "lcq",
-   "parita": false
-  },
-  {
-   "pos": 9,
-   "giocatore": "Marco Bonati",
-   "punti": 18,
-   "matchVinti": 6,
-   "gameVinti": 16,
-   "serateVinte": 0,
-   "giantKiller": 0,
-   "presenze": 3,
    "assenze": 1,
-   "zona": "lcq",
+   "zona": "",
    "parita": false
   },
   {
-   "pos": 10,
+   "pos": 12,
    "giocatore": "Matteo Langella",
    "punti": 18,
    "matchVinti": 6,
@@ -152,25 +178,12 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 3,
-   "assenze": 1,
-   "zona": "lcq",
-   "parita": false
-  },
-  {
-   "pos": 11,
-   "giocatore": "Luca Brugnone",
-   "punti": 17,
-   "matchVinti": 5,
-   "gameVinti": 13,
-   "serateVinte": 0,
-   "giantKiller": 1,
-   "presenze": 3,
-   "assenze": 1,
+   "assenze": 2,
    "zona": "",
    "parita": false
   },
   {
-   "pos": 12,
+   "pos": 13,
    "giocatore": "Daniele Rebecchi",
    "punti": 16,
    "matchVinti": 5,
@@ -178,25 +191,25 @@
    "serateVinte": 0,
    "giantKiller": 1,
    "presenze": 4,
-   "assenze": 0,
-   "zona": "",
-   "parita": false
-  },
-  {
-   "pos": 13,
-   "giocatore": "Ivan Tongiani",
-   "punti": 16,
-   "matchVinti": 5,
-   "gameVinti": 13,
-   "serateVinte": 0,
-   "giantKiller": 0,
-   "presenze": 3,
    "assenze": 1,
    "zona": "",
    "parita": false
   },
   {
    "pos": 14,
+   "giocatore": "Dario Chelli",
+   "punti": 15,
+   "matchVinti": 5,
+   "gameVinti": 15,
+   "serateVinte": 0,
+   "giantKiller": 0,
+   "presenze": 4,
+   "assenze": 1,
+   "zona": "",
+   "parita": false
+  },
+  {
+   "pos": 15,
    "giocatore": "Simone Lazzini",
    "punti": 13,
    "matchVinti": 4,
@@ -204,20 +217,7 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 2,
-   "assenze": 2,
-   "zona": "",
-   "parita": false
-  },
-  {
-   "pos": 15,
-   "giocatore": "Dario Chelli",
-   "punti": 12,
-   "matchVinti": 4,
-   "gameVinti": 12,
-   "serateVinte": 0,
-   "giantKiller": 0,
-   "presenze": 3,
-   "assenze": 1,
+   "assenze": 3,
    "zona": "",
    "parita": false
   },
@@ -230,7 +230,7 @@
    "serateVinte": 0,
    "giantKiller": 1,
    "presenze": 1,
-   "assenze": 3,
+   "assenze": 4,
    "zona": "",
    "parita": false
   },
@@ -243,7 +243,7 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 1,
-   "assenze": 3,
+   "assenze": 4,
    "zona": "",
    "parita": false
   },
@@ -256,7 +256,7 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 3,
-   "assenze": 1,
+   "assenze": 2,
    "zona": "",
    "parita": false
   },
@@ -269,7 +269,7 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 0,
-   "assenze": 4,
+   "assenze": 5,
    "zona": "",
    "parita": false
   },
@@ -282,7 +282,7 @@
    "serateVinte": 0,
    "giantKiller": 0,
    "presenze": 0,
-   "assenze": 4,
+   "assenze": 5,
    "zona": "",
    "parita": false
   }
@@ -1012,9 +1012,114 @@
   {
    "numero": 5,
    "data": "2026-10-29",
-   "giocata": false,
-   "bersaglioGk": "",
-   "righe": []
+   "giocata": true,
+   "bersaglioGk": "Alessandro Orlandini",
+   "righe": [
+    {
+     "pos": 1,
+     "giocatore": "Marco Doveri",
+     "punti": 13,
+     "matchVinti": 3,
+     "gameVinti": 6,
+     "giantKiller": true,
+     "matchPersi": 0,
+     "pareggi": 0,
+     "gamePersi": 1,
+     "primo": true,
+     "mazzo": "Selesnya"
+    },
+    {
+     "pos": 2,
+     "giocatore": "Alessandro Orlandini",
+     "punti": 6,
+     "matchVinti": 2,
+     "gameVinti": 4,
+     "giantKiller": false,
+     "matchPersi": 1,
+     "pareggi": 0,
+     "gamePersi": 3,
+     "primo": false,
+     "mazzo": "Gruul"
+    },
+    {
+     "pos": 3,
+     "giocatore": "Marco Bonati",
+     "punti": 6,
+     "matchVinti": 2,
+     "gameVinti": 4,
+     "giantKiller": false,
+     "matchPersi": 1,
+     "pareggi": 0,
+     "gamePersi": 4,
+     "primo": false,
+     "mazzo": "Mono-Red"
+    },
+    {
+     "pos": 4,
+     "giocatore": "Ivan Tongiani",
+     "punti": 6,
+     "matchVinti": 2,
+     "gameVinti": 4,
+     "giantKiller": false,
+     "matchPersi": 1,
+     "pareggi": 0,
+     "gamePersi": 2,
+     "primo": false,
+     "mazzo": "Mono-Blue"
+    },
+    {
+     "pos": 5,
+     "giocatore": "Dario Chelli",
+     "punti": 3,
+     "matchVinti": 1,
+     "gameVinti": 3,
+     "giantKiller": false,
+     "matchPersi": 2,
+     "pareggi": 0,
+     "gamePersi": 4,
+     "primo": false,
+     "mazzo": "Mono-Green"
+    },
+    {
+     "pos": 6,
+     "giocatore": "Luca Brugnone",
+     "punti": 3,
+     "matchVinti": 1,
+     "gameVinti": 3,
+     "giantKiller": false,
+     "matchPersi": 2,
+     "pareggi": 0,
+     "gamePersi": 4,
+     "primo": false,
+     "mazzo": "Azorius"
+    },
+    {
+     "pos": 7,
+     "giocatore": "Gianmarco Cucciniello",
+     "punti": 3,
+     "matchVinti": 1,
+     "gameVinti": 3,
+     "giantKiller": false,
+     "matchPersi": 2,
+     "pareggi": 0,
+     "gamePersi": 4,
+     "primo": false,
+     "mazzo": "Jund"
+    },
+    {
+     "pos": 8,
+     "giocatore": "Jacopo Pinelli",
+     "punti": 0,
+     "matchVinti": 0,
+     "gameVinti": 1,
+     "giantKiller": false,
+     "matchPersi": 3,
+     "pareggi": 0,
+     "gamePersi": 6,
+     "primo": false,
+     "mazzo": "Boros"
+    }
+   ]
   },
   {
    "numero": 6,
@@ -2024,6 +2129,114 @@
    "gameB": 2,
    "b": "Jacopo Pinelli",
    "vincitore": "Jacopo Pinelli"
+  },
+  {
+   "tappa": 5,
+   "turno": 1,
+   "a": "Dario Chelli",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Marco Doveri",
+   "vincitore": "Marco Doveri"
+  },
+  {
+   "tappa": 5,
+   "turno": 1,
+   "a": "Ivan Tongiani",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Luca Brugnone",
+   "vincitore": "Luca Brugnone"
+  },
+  {
+   "tappa": 5,
+   "turno": 1,
+   "a": "Marco Bonati",
+   "gameA": 2,
+   "gameB": 1,
+   "b": "Jacopo Pinelli",
+   "vincitore": "Marco Bonati"
+  },
+  {
+   "tappa": 5,
+   "turno": 1,
+   "a": "Gianmarco Cucciniello",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Alessandro Orlandini",
+   "vincitore": "Alessandro Orlandini"
+  },
+  {
+   "tappa": 5,
+   "turno": 2,
+   "a": "Luca Brugnone",
+   "gameA": 1,
+   "gameB": 2,
+   "b": "Marco Bonati",
+   "vincitore": "Marco Bonati"
+  },
+  {
+   "tappa": 5,
+   "turno": 2,
+   "a": "Alessandro Orlandini",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Marco Doveri",
+   "vincitore": "Marco Doveri"
+  },
+  {
+   "tappa": 5,
+   "turno": 2,
+   "a": "Dario Chelli",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Ivan Tongiani",
+   "vincitore": "Ivan Tongiani"
+  },
+  {
+   "tappa": 5,
+   "turno": 2,
+   "a": "Jacopo Pinelli",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Gianmarco Cucciniello",
+   "vincitore": "Gianmarco Cucciniello"
+  },
+  {
+   "tappa": 5,
+   "turno": 3,
+   "a": "Marco Doveri",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Marco Bonati",
+   "vincitore": "Marco Doveri"
+  },
+  {
+   "tappa": 5,
+   "turno": 3,
+   "a": "Luca Brugnone",
+   "gameA": 0,
+   "gameB": 2,
+   "b": "Alessandro Orlandini",
+   "vincitore": "Alessandro Orlandini"
+  },
+  {
+   "tappa": 5,
+   "turno": 3,
+   "a": "Ivan Tongiani",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Gianmarco Cucciniello",
+   "vincitore": "Ivan Tongiani"
+  },
+  {
+   "tappa": 5,
+   "turno": 3,
+   "a": "Dario Chelli",
+   "gameA": 2,
+   "gameB": 0,
+   "b": "Jacopo Pinelli",
+   "vincitore": "Dario Chelli"
   }
  ],
  "calendario": [
@@ -2136,6 +2349,11 @@
    "tappa": 4,
    "data": "2026-10-22",
    "vincitore": "Johnny Rebecchi"
+  },
+  {
+   "tappa": 5,
+   "data": "2026-10-29",
+   "vincitore": "Jacopo Pinelli"
   }
  ],
  "passwordEstrazioneHash": "238bdb601c7a71847dc34257fa90d91034a5159bdf8b965e1446de28325c73aa"
