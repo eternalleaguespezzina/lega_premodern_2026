@@ -23,6 +23,13 @@ export function dataBreve(iso: string): string {
   return formatoBreve.format(new Date(iso + 'T12:00:00'));
 }
 
+/** La data di oggi come "2026-11-13", secondo l'ora del telefono (non in UTC). */
+export function oggiIso(): string {
+  const d = new Date();
+  const due = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${due(d.getMonth() + 1)}-${due(d.getDate())}`;
+}
+
 /** Zero mostrato come trattino, per alleggerire le tabelle. */
 export function oTrattino(n: number): string | number {
   return n === 0 ? '–' : n;

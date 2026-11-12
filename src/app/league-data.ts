@@ -1,5 +1,6 @@
 import { Injectable, computed, resource } from '@angular/core';
 import { DatiLega, EventoCalendario } from './models';
+import { oggiIso } from './util';
 
 /**
  * I dati arrivano da data.json. Nell'anteprima a file unico sono incorporati
@@ -32,9 +33,14 @@ export class LeagueData {
 
   readonly capolista = computed(() => this.classifica()[0] ?? null);
 
-  /** Primo appuntamento da oggi in avanti. */
+  /** Primo appuntamento da oggi in avanti che non risulta già giocato. */
   readonly prossimoEvento = computed<EventoCalendario | null>(() => {
-    const oggi = new Date().toISOString().slice(0, 10);
-    return this.calendario().find((e) => e.data >= oggi) ?? null;
+    const oggi = oggiIso();
+    return this.calendario().find((e) => e.data >= oggi && !this.giocato(e)) ?? null;
   });
+
+  /** Una tappa è giocata se il data.json la conta tra le tappe giocate, anche la sera stessa. */
+  giocato(e: EventoCalendario): boolean {
+    return e.tipo === 'tappa' && (e.numero ?? 0) <= (this.dati.value()?.tappeGiocate ?? 0);
+  }
 }

@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LeagueData } from '../../league-data';
 import { EventoCalendario } from '../../models';
-import { dataEstesa } from '../../util';
+import { dataEstesa, oggiIso } from '../../util';
 
 @Component({
   selector: 'els-calendario',
@@ -14,7 +14,7 @@ export class CalendarioPage {
   protected readonly dataEstesa = dataEstesa;
 
   protected passato(e: EventoCalendario): boolean {
-    return e.data < new Date().toISOString().slice(0, 10);
+    return e.data < oggiIso() || this.lega.giocato(e);
   }
 
   protected prossimo(e: EventoCalendario): boolean {
